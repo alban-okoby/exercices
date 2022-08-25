@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
+        /*
         Personnel p = new Personnel();
 
         p.ajouterEmploye(new Vendeur("Pierre", "Business", 45, "1995", 3000
@@ -22,6 +23,8 @@ public class Main {
         p.afficherSalaires();
         System.out.println("Le salaire moyen dans l'entreprise est de " + p
                 .salaireMoyen() + " francs.");
+
+         */
     }
 }
 
