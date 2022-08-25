@@ -2,7 +2,6 @@ package com.epfl;
 
 import com.epfl.Personnel;
 import com.epfl.TypeSalaire;
-import com.epfl.Salaire;
 
 public class Main {
 

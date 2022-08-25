@@ -2,9 +2,10 @@ package com.epfl;
 
 import java.util.Date;
 
-public class Main {
 
     public abstract class Employe {
+
+
         // Les propriétés communes aux différentes classes.
         public String name;
         public String lastName;
@@ -23,16 +24,21 @@ public class Main {
             this.date = date;
             this.age = age;
         }
-
-        /*
+        
+        public abstract calculSalaire() {
+            
+            
+        }
+    }
+        /**
         * Méthode qui reccupère le nom et le prénom de l'employé de type chaîne de caractères
-         */
+        */
 
         public String getName() {
             return "L'employé ".concat(this.name).concat(" ").concat(this.lastName);
         }
 
-    }
+    
 
     /*
         Personnel p = new Personnel();
