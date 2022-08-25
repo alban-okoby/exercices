@@ -1,16 +1,14 @@
 package com.epfl;
 
-import java.util.Date;
 
-
-    public abstract class Employe {
+    abstract class Employe {
 
 
         // Les propriétés communes aux différentes classes.
         public String name;
         public String lastName;
-        public Date date;
-        public int age;
+        public int date;
+        public String age;
 
         /**
          * @param name est le nom de l'employé
@@ -18,7 +16,7 @@ import java.util.Date;
          * @param date est la date de début de service de l'employé
          */
 
-        public Employe(String name, String lastName, Date date, int age) {
+        public Employe(String name, String lastName, String age, int date) {
             this.name = name;
             this.lastName = lastName;
             this.date = date;
@@ -29,7 +27,7 @@ import java.util.Date;
 
             
         // }
-    }
+    
         /**
         * Méthode qui reccupère le nom et le prénom de l'employé de type chaîne de caractères
         */

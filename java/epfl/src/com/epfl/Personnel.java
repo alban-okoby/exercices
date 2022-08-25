@@ -23,7 +23,7 @@ public class Personnel {
      * Méthode permettant d'ajouter un employé
      * @param employe
      */
-    public void adjoutEmploye(TypeSalaire employe) {
+    public void ajouterEmploye(TypeSalaire employe) {
         this.employees.add(employe);
     }
     
@@ -34,12 +34,33 @@ public class Personnel {
     * @param employe
     */
     
-    public String afficheSalaire() {
+    public void afficherSalaires() {
 
         /*
          * Utilisation de la string pour afficher le salaire d'un employé
+         * Utilisation de la méthode append() pour les type primitif 
+         * Transformer le salaire double en String 
+         * 
          */
+
+         StringBuffer infos = new StringBuffer(); 
+
+        // Utilisation de append avec un objet de type String 
+        infos.append("Liste des salaires des employés \n" ); 
+
+        for(TypeSalaire employe : this.employees ) {
+
+            infos.append("Le ");
+            infos.append(employe.getName());
+            infos.append(" gagne ");
+            infos.append(employe.calculerSalaire());
+            infos.append(" francs. \n");
+        }
+        // La toSTring méthode permet d'instancier une seule fois et non à chaque fois qu'il y a une concaténation en occurence ici avec la append() méthode
+        // return infos.toString();
+
     }
 
-
 }
+
+

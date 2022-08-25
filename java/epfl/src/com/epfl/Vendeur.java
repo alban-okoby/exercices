@@ -1,8 +1,7 @@
 package com.epfl;
 
-import java.util.Date;
 
-public class Vendeur extends Employe {
+class Vendeur extends Employe {
     
     /**
      * La propriété spécifique aux vendeurs
@@ -19,9 +18,9 @@ public class Vendeur extends Employe {
       * @param chiffreDeVente est le total mensuel de vente du vendeur
       */
 
-    public Vendeur(String name, String lastName, Date date, int age, int chiffreDeVente) {
+    public Vendeur(String name, String lastName, String age, int date, int chiffreDeVente) {
         // Appel au construction de la super classe Employé
-        super(name, lastName, date, age);
+        super(name, lastName, age, date);
         this.chiffreDeVente = chiffreDeVente;
     }
 

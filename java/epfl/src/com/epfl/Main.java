@@ -1,7 +1,5 @@
 package com.epfl;
 
-import com.epfl.Personnel;
-import com.epfl.TypeSalaire;
 
 public class Main {
 
@@ -10,8 +8,9 @@ public class Main {
 
         /*
         Personnel p = new Personnel();
-
-        p.ajouterEmploye(new Vendeur("Pierre", "Business", 45, "1995", 3000
+        
+        p.ajouterEmploye(new Vendeur("Pierre", "Business", 45, "1995", 3000));
+        
                 0));
         p.ajouterEmploye(new Representant("Léon", "Vendtout", 25, "2001", 2
                 0000));
