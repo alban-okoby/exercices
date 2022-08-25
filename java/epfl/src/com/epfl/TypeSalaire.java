@@ -10,8 +10,14 @@ public interface TypeSalaire {
      * 
      * @param return int montant du salaire mensuel de l'Employé 
      */
-//     public calculSalaire() {
+    public int calculSalaire(); 
 
+    /**
+     * Méthode permettant de reccupérer le nom et prénom de l'employé
+     * 
+     * @param return int montant du salaire mensuel de l'Employé 
+     */
+    public String getName();
         
-//     }
+    
 }

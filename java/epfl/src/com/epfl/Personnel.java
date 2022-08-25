@@ -19,14 +19,14 @@ public class Personnel {
         this.employees = new ArrayList<>();
     }
 
-        /**
-         * Méthode permettant d'ajouter un employé
-         * @param employe
-         */
-        public void adjoutEmploye(TypeSalaire employe) {
-            this.employees.add(employe);
-        }
-        
+    /**
+     * Méthode permettant d'ajouter un employé
+     * @param employe
+     */
+    public void adjoutEmploye(TypeSalaire employe) {
+        this.employees.add(employe);
+    }
+    
     
     /**
     * Méthode permettant d'afficher le nom d'un employé

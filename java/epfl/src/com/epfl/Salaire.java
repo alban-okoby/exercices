@@ -25,10 +25,10 @@ import java.util.Date;
             this.age = age;
         }
         
-        public abstract calculSalaire() {
+        // public int  calculSalaire() {
+
             
-            
-        }
+        // }
     }
         /**
         * Méthode qui reccupère le nom et le prénom de l'employé de type chaîne de caractères
