@@ -13,13 +13,17 @@ public class EPFL {
 	
 	/**
 	 * @param e
-	 * @return Ajouter un EPPLien ( soit un étudiant ou un personnel)
+	 * @return Ajoute un EPPLien ( soit un étudiant ou un personnel)
 	 */
 	public EPFL ajouter(EPFLien e) {
 		epfliens.add(e);
 		return this;
 	}
 	
+	/**
+	 * @param i
+	 * @return recupère la valeur d'un EPPLien ( soit un étudiant ou un personnel )
+	 */
 	public EPFLien get(int i) {
 		if (i < totalEPFLien()) {
 			return epfliens.get(i);
@@ -35,7 +39,7 @@ public class EPFL {
 	}
 	
 	/**
-	 * @return Méthode qui renvoie le nombres d'EPFL (soit le nombre d'étudiants)
+	 * @return Méthode qui renvoie le nombres d'EPFL (soit le nombre d'étudiants et de personnels)
 	 */
 	public int totalEtudiant() {
 		int nbreEtudiant = 0;
@@ -48,7 +52,7 @@ public class EPFL {
 	}
 	
 	/**
-	 * @return Cette méthode retourne le nombre d'années moyen pendant lesquelles les personnes enregistrées ont fréquenté l'EPFL
+	 * @return Cette méthode retourne le nombre d'années moyen pendant lequel les personnes enregistrées ont fréquentés l'EPFL
 	 */
 	public double tempsMoyen() {
 		double moyenne = 0.;
@@ -64,8 +68,9 @@ public class EPFL {
 	}
 	
 	/**
-	 * affiche la liste de tous les EPPLiens
-	 */
+	 * affiche la liste de tous les EPPLiens 
+	 * 
+	*/
 	public void afficher() {
 		System.out.println("La liste des EPFLiens:");
 		for (EPFLien ep : epfliens) {
