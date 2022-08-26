@@ -3,6 +3,12 @@ package com.epfl;
 public class EtudiantEchange extends Etudiant {
 	private String universiteOrigine;
 	
+	/**
+	 * @param nom
+	 * @param annee
+	 * @param section
+	 * @param universiteOrigine 
+	 */
 	public EtudiantEchange(String nom, int annee, String section, String universiteOrigine) {
 		super(nom, annee, section);
 		this.universiteOrigine = universiteOrigine;
