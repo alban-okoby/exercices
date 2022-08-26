@@ -6,10 +6,10 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        /*
         Personnel p = new Personnel();
         
         p.ajouterEmploye(new Vendeur("Pierre", "Business", 45, "1995", 3000));
+        /*
         
                 0));
         p.ajouterEmploye(new Representant("Léon", "Vendtout", 25, "2001", 2
