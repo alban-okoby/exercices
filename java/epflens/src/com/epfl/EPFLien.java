@@ -2,7 +2,7 @@ package com.epfl;
 
 /**
 	 * Classe abstraite regoupant les attributs
-	 * et les méthodes communes aux différentes classes
+	 * et les méthodes communes aux différentes classes ( Etudiant et Personnel )
  */
 public abstract class EPFLien {
 
