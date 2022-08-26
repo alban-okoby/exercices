@@ -3,10 +3,7 @@ package com.epfl;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-/**
- * 
- *
- */
+
 public class EPFL {
 	private ArrayList<EPFLien> epfliens;
 	
@@ -40,9 +37,6 @@ public class EPFL {
 		return nbreEtudiant;
 	}
 	
-	/**
-	 * @return retourne le temps moyen que passe l'Etudiant dans l'Etablissement
-	 */
 	public double tempsMoyen() {
 		double moyenne = 0.;
 		int anneeCourante  = Calendar.getInstance().get(Calendar.YEAR);
