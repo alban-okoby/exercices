@@ -1,9 +1,20 @@
 package com.epfl;
 
+/**
+	 * Classe abstraite regoupant les attributs
+	 * et les méthodes communes aux différentes classes
+ */
 public abstract class EPFLien {
+
+    // Les propriétés communes aux différentes classes.
 	protected String nom;
 	protected int annee;
 	
+	/**
+	 * Constructeur par défaut de la classe EPPLien 
+	 * @param nom le nom du personnel ou de l'étudiant
+	 * @param annee l'année du personnel ou de l'étudiant
+	 */
 	public EPFLien(String nom, int annee) {
 		this.nom = nom;
 		this.annee = annee;
