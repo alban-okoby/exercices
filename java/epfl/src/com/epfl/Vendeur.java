@@ -1,7 +1,7 @@
 package com.epfl;
 
 
-class Vendeur extends Employe {
+class Vendeur extends Employe implements TypeSalaire {
     
     /**
      * La propriété spécifique aux vendeurs
@@ -37,5 +37,13 @@ class Vendeur extends Employe {
      */
     protected double pourcentageVente() {
         return this.chiffreDeVente * 0.2; 
+    }
+
+    /**
+     * Méthode permettant d'ajouter un employé
+     * @param personnel 
+     */
+    public void ajouterEmploye(Personnel personnel) {
+        personnel.employees.add((TypeSalaire) this);
     }
 }
