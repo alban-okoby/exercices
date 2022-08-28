@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b7f719ab-8ee7-4e29-ae92-95f2f43a11fb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/java/epflens/src/com/epfl/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/epflens/src/com/epfl/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/salaires/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/salaires/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/salaires/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/salaires/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/salaires/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/salaires/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/salaires/java.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/salaires/out/production/java/com/epfl/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/salaires/src/com/salaires/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/salaires/src/com/salaires/Personnel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/salaires/src/com/salaires/Salaire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/salaires/src/com/salaires/TypeSalaire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/salaires/src/com/salaires/Vendeur.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2E0JXjL5D3E4SJ5EEt4jC7DuqbG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.supermarche.Main" />
+      <module name="exercices" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b7f719ab-8ee7-4e29-ae92-95f2f43a11fb" name="Default Changelist" comment="" />
+      <created>1661726609781</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661726609781</updated>
+      <workItem from="1661726641193" duration="1554000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="70" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1661728327058">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="70" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1661728327058" />
+    <state x="382" y="185" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1661727781293">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="382" y="185" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1661727781293" />
+  </component>
+</project>

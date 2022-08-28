@@ -22,7 +22,7 @@ public class Direction {
         // Instation d'objet Epfl pour y ajouter le Personnel et/ou les Etudiants crées
         EPFL epfl = new EPFL();
         
-        // Ajout des personnes instantées
+        // Ajout des personnes instantiées
         epfl.ajouter(cecile)
                 .ajouter(gaston)
                 .ajouter(yvan)
