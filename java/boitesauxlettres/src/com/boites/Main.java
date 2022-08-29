@@ -1,8 +1,5 @@
 package com.boites;
 
-
-import java.text.Format;
-
 abstract class Courrier {
     protected double poids;
     protected boolean estExpress;
@@ -73,8 +70,13 @@ class Lettre extends Courrier {
         str += "  Format : " + format + "\n";
         return str;
     }
+}
 
-   
+/**
+ * On liste ici les formats de lettre possible
+ */
+enum Format {
+    A3, A4;
 }
 
 class Colis extends Courrier {
