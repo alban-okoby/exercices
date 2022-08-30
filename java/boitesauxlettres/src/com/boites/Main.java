@@ -1,16 +1,26 @@
 package com.boites;
 
+
 abstract class Courrier {
     protected double poids;
     protected boolean estExpress;
     protected String adresseDestination;
 
+    /**
+     * Constructeur
+     * @param poids le poids du  courrier
+     * @param estExpress le mode d'expédition du courrier ( Express ou normal )
+     * @param adresseDestination l'adresse de destination
+     */
     public Courrier(double poids, boolean estExpress, String adresseDestination) {
         this.poids = poids;
         this.estExpress = estExpress;
         this.adresseDestination = adresseDestination;
     }
 
+    /**
+     * afficher le contenu de la boîte aux lettre
+     */
     public abstract void afficher();
 
     public abstract double affranchirNormal();
@@ -27,6 +37,9 @@ abstract class Courrier {
     }
 
 
+    /**
+     * @return verifie si la lettre est vide.
+     */
     public boolean estInvalide() {
         return adresseDestination.isEmpty();
     }
@@ -44,9 +57,18 @@ abstract class Courrier {
 }
 
 
+/**
+ * Class Lettre
+ */
 class Lettre extends Courrier {
     private Format format;
 
+    /** Constructeur de la classe Lettre
+     * @param poids
+     * @param estExpress
+     * @param adresseDestination
+     * @param format
+     */
     public Lettre(double poids, boolean estExpress, String adresseDestination, Format format) {
         super(poids, estExpress, adresseDestination);
         this.format = format;
@@ -79,9 +101,22 @@ enum Format {
     A3, A4;
 }
 
+/**
+ * Class
+ * caractérisée par son poids
+ * le mode d'expédition ( express ou normal)
+ * son adresse de destination
+ * son format ("A3 ou A4")
+ */
 class Colis extends Courrier {
     private double volume;
 
+    /**
+     * @param poids
+     * @param estExpress
+     * @param adresseDestination
+     * @param volume
+     */
     public Colis(double poids, boolean estExpress, String adresseDestination, double volume) {
         super(poids, estExpress, adresseDestination);
         this.volume = volume;
@@ -123,7 +158,16 @@ class Colis extends Courrier {
     }
 }
 
+/**
+ * La classe publicité
+ */
 class Publicite extends Courrier {
+
+    /**
+     * @param poids
+     * @param estExpress
+     * @param adresseDestination
+     */
     public Publicite(double poids, boolean estExpress, String adresseDestination) {
         super(poids, estExpress, adresseDestination);
     }
@@ -151,11 +195,19 @@ class Boite {
     private Courrier[] courriers;
     private int index;
 
+    /**
+     * Constructeur
+     * @param taille
+     */
     public Boite(int taille) {
         courriers = new Courrier[taille];
         this.index = 0;
     }
 
+    /**
+     * Ajouter un courrier dans la boîte
+     * @param courrier représente chaque courrier dans la boîte aux lettres
+     */
     public void ajouterCourrier(Courrier courrier) {
         if (index < courriers.length) {
             courriers[index] = courrier;
@@ -165,6 +217,10 @@ class Boite {
         }
     }
 
+    /**
+     * Associe à chaque courrier de la boîte le montant néccéssaire pour l'affranchir
+     * @return et rennvoie le nombre totat de courrier affranchi
+     */
     public double affranchir() {
         double total = .0;
         for(int i = 0; i < index; i++) {
@@ -173,6 +229,9 @@ class Boite {
         return total;
     }
 
+    /**
+     * @return la listes des courriers invalides
+     */
     public int courriersInvalides() {
         int nbreInvalide = 0;
         for(int i = 0; i < index; i++) {
@@ -183,6 +242,9 @@ class Boite {
         return nbreInvalide;
     }
 
+    /**
+     * affiche le contenu de la boîte aux lettre
+     */
     public void afficher() {
         for(int i = 0; i < index; i++) {
             courriers[i].afficher();
@@ -193,12 +255,12 @@ class Boite {
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        // 30  est la capacit'e maximale de la
+
+        // 50  est la capacité maximale de la
         // boite aux lettres
-        // (pas necessaire si vous dêcidez d'utiliser
+        // (pas necessaire si vous nous décidons d'utiliser
         // un ArrayList).
-        Boite boite = new Boite(30);
+        Boite boite = new Boite(50);
 
         //Creation de divers courriers/colis..
         Lettre lettre1 = new Lettre(200, true, "Chemin des Acacias 28, 1009 Pully", Format.A3);
@@ -209,6 +271,7 @@ public class Main {
 
         Colis colis1 = new Colis(5000, true, "Grand rue 18, 1950 Sion", 30);
         Colis colis2 = new Colis(3000, true, "Chemin des fleurs 48, 2800 Delemont", 70); //Colis invalide !
+        Colis colis3 = new Colis(4000, false, "Abobo derrière rails", 50.1); //Colis invalide !
 
         boite.ajouterCourrier(lettre1);
         boite.ajouterCourrier(lettre2);
@@ -216,6 +279,7 @@ public class Main {
         boite.ajouterCourrier(pub2);
         boite.ajouterCourrier(colis1);
         boite.ajouterCourrier(colis2);
+        boite.ajouterCourrier(colis3);
 
 
         System.out.println("Le montant total d'affranchissement est de " +
