@@ -102,7 +102,7 @@ enum Format {
 }
 
 /**
- * Class Colis
+ * Class
  * caractérisée par son poids
  * le mode d'expédition ( express ou normal)
  * son adresse de destination
