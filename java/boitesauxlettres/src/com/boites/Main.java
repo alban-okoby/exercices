@@ -102,7 +102,7 @@ enum Format {
 }
 
 /**
- * Class
+ * Class Colis
  * caractérisée par son poids
  * le mode d'expédition ( express ou normal)
  * son adresse de destination
@@ -256,13 +256,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // 50  est la capacité maximale de la
-        // boite aux lettres
-        // (pas necessaire si vous nous décidons d'utiliser
-        // un ArrayList).
+        
         Boite boite = new Boite(50);
 
         //Creation de divers courriers/colis..
+        Lettre lettre0 = new Lettre(250, false, "Phamarcie Mémorial", Format.A4);
         Lettre lettre1 = new Lettre(200, true, "Chemin des Acacias 28, 1009 Pully", Format.A3);
         Lettre lettre2 = new Lettre(800, false, "", Format.A4); // invalide
 
@@ -272,7 +270,7 @@ public class Main {
         Colis colis1 = new Colis(5000, true, "Grand rue 18, 1950 Sion", 30);
         Colis colis2 = new Colis(3000, true, "Chemin des fleurs 48, 2800 Delemont", 70); //Colis invalide !
         Colis colis3 = new Colis(4000, false, "Abobo derrière rails", 50.1); //Colis invalide !
-
+        boite.ajouterCourrier(lettre0);
         boite.ajouterCourrier(lettre1);
         boite.ajouterCourrier(lettre2);
         boite.ajouterCourrier(pub1);

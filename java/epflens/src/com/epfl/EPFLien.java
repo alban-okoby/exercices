@@ -13,7 +13,7 @@ public abstract class EPFLien {
 	/**
 	 * Constructeur par défaut de la classe EPPLien 
 	 * @param nom le nom du personnel ou de l'étudiant
-	 * @param annee l'année du personnel ou de l'étudiant
+	 * @param annee l'année d'entrée du personnel ou de l'étudiant
 	 */
 	public EPFLien(String nom, int annee) {
 		this.nom = nom;
@@ -24,6 +24,7 @@ public abstract class EPFLien {
 	 * Méthode d'affichage d'un personnel ou d'un étudiant
 	 */
 	public void afficher() {
+
 		System.out.print(this);
 	}
 	
