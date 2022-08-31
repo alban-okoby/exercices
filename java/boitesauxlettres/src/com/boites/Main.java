@@ -206,7 +206,7 @@ class Boite {
 
     /**
      * Ajouter un courrier dans la boîte
-     * @param courrier représente chaque courrier dans la boîte aux lettres
+     * @param courrier Ajoute chaque courrier dans la boîte aux lettres
      */
     public void ajouterCourrier(Courrier courrier) {
         if (index < courriers.length) {
