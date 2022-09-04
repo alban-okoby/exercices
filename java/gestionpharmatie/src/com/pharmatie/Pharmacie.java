@@ -130,7 +130,7 @@ public class Pharmacie {
                 }
             }
             if (!find) {
-            System.out.println("Ce medicament n'est pas en stock veuilliez recommencer");
+                System.out.println("Ce medicament n'est pas en stock veuilliez recommencer");
             }
         }
         return m;
@@ -152,11 +152,71 @@ public class Pharmacie {
         scanner.nextLine();
 
         return quantite;
-        
+
     }
 
     static void quitter() {
         System.out.println("Programme termine!");
     }
 }
-       
+
+// Créations de nos classe objets
+class Client {
+
+    private double credit = 0.0;
+    private String nom = "";
+
+    public Client(double credit, String nom) {
+        this.credit = credit;
+        this.nom = nom;
+    }
+
+    public void augmenterCredit(double montant) {
+        credit = credit + montant;
+    }
+
+    public void diminuerCredit(double montant) {
+        credit = credit - montant;
+    }
+
+    public double getCredit() {
+        return credit;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+}
+
+class Medicament {
+    // un médicament a un nom, un prix et une quantité en stock
+    private String nom;
+    private double prix;
+    private int stock;
+
+    public Medicament(String nom, double prix, int stock) {
+        this.nom = nom;
+        this.prix = prix;
+        this.stock = stock;
+    }
+
+    public void augmenterStock(int quantite) {
+        stock = stock + quantite;
+    }
+
+    public void diminuerStock(int quantite) {
+        stock = stock - quantite;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public double getPrix() {
+        return prix;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+}
