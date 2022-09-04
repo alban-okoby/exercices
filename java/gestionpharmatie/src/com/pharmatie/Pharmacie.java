@@ -1,13 +1,15 @@
 package com.pharmatie;
 
+import java.util.Scanner;
+
 public class Pharmacie {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         Client[] clients = new Client[2];
         Medicament[] medicaments = new Medicament[2];
-        clients[0] = new Client("Malfichu", 0.0);
-        clients[1] = new Client("Palichon", 0.0);
+        clients[0] = new Client("client1", 0.0);
+        clients[1] = new Client("client2", 0.0);
         medicaments[0] = new Medicament("Aspiron", 20.40, 5);
         medicaments[1] = new Medicament("Rhinoplexil", 19.15, 5);
         int choix = 0;
@@ -51,9 +53,6 @@ public class Pharmacie {
         return choix;
     }
 
-    // Méthodes auxiliaires à compléter
-}
-
     // Autres classes à compléter
     static void achat(Client[] clients, Medicament[] medicaments) {
         Client client = lireClient(clients);
@@ -70,15 +69,14 @@ public class Pharmacie {
 
     static void approvisionnement(Medicament[] medicaments) {
         Medicament medicament = lireMedicament(medicaments);
-        System.out.println("Donner la Quantite : ");
+        System.out.println("Saisissez la Quantite : ");
         int quantite = scanner.nextInt();
-        // se débarasser du \n
         scanner.nextLine();
         medicament.augmenterStock(quantite);
     }
 
     /**
-     * @param clients     affiche les clients
+     * @param clients affiche les clients
      * @param medicaments affiche les médicaments
      */
     static void affichage(Client[] clients, Medicament[] medicaments) {
@@ -86,7 +84,7 @@ public class Pharmacie {
 
         for (int i = 0; i < medicaments.length; i++) {
             System.out.println("Stock du medicament " + medicaments[i].getNom()
-                    + " :" + medicaments[i].getStock());
+                    + " " + medicaments[i].getStock());
         }
         System.out.println("Affichage des credits");
 
@@ -96,67 +94,86 @@ public class Pharmacie {
         }
     }
 
+    /**
+     * @param clients
+     * @return retourne un client s'il existe
+     */
     static Client lireClient(Client[] clients) {
         String nom = null;
         boolean find = false;
-        Client c = null;
-        System.out.println("Nom du client?:");
+        Client client = null;
+        System.out.println("Le nom du client ?:");
         while (!find) {
             nom = scanner.nextLine();
             for (int i = 0; (!find && i < clients.length); i++) {
                 if ((clients[i].getNom()).equals(nom)) {
                     find = true;
-                    c = clients[i];
+                    client = clients[i];
                 }
             }
             if (!find) {
                 System.out.println("Ce client est inconnu, veuillez reprendre ");
             }
         }
-        return c;
+        return client;
     }
 
+    /**
+     * Méthode chargée de la vérification d'un médicament 
+     * @param medicaments
+     * @return retourne le nom du medicament s'il existe 
+     */
     static Medicament lireMedicament(Medicament[] medicaments) {
         String nom = null;
         boolean find = false;
-        Medicament m = null;
-        System.out.println("Nom du medicament?:");
+        Medicament medicament = null;
+        System.out.println("Nom du medicament ?:");
         while (!find) {
             nom = scanner.nextLine();
             for (int i = 0; (!find && i < medicaments.length); i++) {
                 if ((medicaments[i].getNom()).equals(nom)) {
                     find = true;
-                    m = medicaments[i];
+                    medicament = medicaments[i];
                 }
             }
             if (!find) {
                 System.out.println("Ce medicament n'est pas en stock veuilliez recommencer");
             }
         }
-        return m;
+        return medicament;
     }
 
+    /**
+     * @return le montant du paiement du client
+     */
     static double lirePaiement() {
-        double paiement = 0.0;
+        double montantPaiement = 0.0;
         System.out.println("quel est le montant du paiement?");
-        paiement = scanner.nextDouble();
+        montantPaiement = scanner.nextDouble();
         scanner.nextLine();
 
-        return paiement;
+        return montantPaiement;
     }
 
+    /**
+     * Reccupérer la quantité achetée
+     * @return la quantité achetée
+     */
     static int lireQuantite() {
-        int quantite;
-        System.out.println("quelle est la quantite achetee?");
-        quantite = scanner.nextInt();
+        int quantiteAchetee;
+        System.out.println("quelle est la quantite achetee ?");
+        quantiteAchetee = scanner.nextInt();
         scanner.nextLine();
 
-        return quantite;
+        return quantiteAchetee;
 
     }
 
+    /**
+     * Quitter le programme
+     */
     static void quitter() {
-        System.out.println("Programme termine!");
+        System.out.println("Programme termine !");
     }
 }
 
@@ -166,7 +183,7 @@ class Client {
     private double credit = 0.0;
     private String nom = "";
 
-    public Client(double credit, String nom) {
+    public Client(String nom, double credit) {
         this.credit = credit;
         this.nom = nom;
     }
@@ -189,7 +206,6 @@ class Client {
 }
 
 class Medicament {
-    // un médicament a un nom, un prix et une quantité en stock
     private String nom;
     private double prix;
     private int stock;
