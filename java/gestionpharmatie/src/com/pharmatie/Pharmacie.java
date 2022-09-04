@@ -60,6 +60,7 @@ public class Pharmacie {
         Medicament medicament = lireMedicament(medicaments);
         double paiement = lirePaiement();
         int quantite = lireQuantite();
+
         if (quantite <= medicament.getStock()) {
             medicament.diminuerStock(quantite);
             client.augmenterCredit((medicament.getPrix() * quantite) - paiement);
@@ -76,17 +77,61 @@ public class Pharmacie {
         medicament.augmenterStock(quantite);
     }
 
+    /**
+     * @param clients     affiche les clients
+     * @param medicaments affiche les médicaments
+     */
     static void affichage(Client[] clients, Medicament[] medicaments) {
-            System.out.println("Affichage des stocks");
+        System.out.println("Affichage des stocks");
 
-            for (int i = 0; i < medicaments.length; i++) {
-                System.out.println("Stock du medicament " + medicaments[i].getNom()
-                + " :" + medicaments[i].getStock());
-            }
-            System.out.println("Affichage des credits");
+        for (int i = 0; i < medicaments.length; i++) {
+            System.out.println("Stock du medicament " + medicaments[i].getNom()
+                    + " :" + medicaments[i].getStock());
+        }
+        System.out.println("Affichage des credits");
 
-            for (int i = 0; i < clients.length; i++) {
-                System.out.println("Credit du client " + clients[i].getNom()
-                + " :" + clients[i].getCredit());
+        for (int i = 0; i < clients.length; i++) {
+            System.out.println("Credit du client " + clients[i].getNom()
+                    + " :" + clients[i].getCredit());
+        }
+    }
+
+    static Client lireClient(Client[] clients) {
+        String nom = null;
+        boolean find = false;
+        Client c = null;
+        System.out.println("Nom du client?:");
+        while (!find) {
+            nom = scanner.nextLine();
+            for (int i = 0; (!find && i < clients.length); i++) {
+                if ((clients[i].getNom()).equals(nom)) {
+                    find = true;
+                    c = clients[i];
+                }
             }
+            if (!find) {
+                System.out.println("Ce client est inconnu, veuillez reprendre ");
+            }
+        }
+        return c;
+    }
+
+    static Medicament lireMedicament(Medicament[] medicaments) {
+        String nom = null;
+        boolean find = false;
+        Medicament m = null;
+        System.out.println("Nom du medicament?:");
+        while (!find) {
+            nom = scanner.nextLine();
+            for (int i = 0; (!find && i < medicaments.length); i++) {
+                if ((medicaments[i].getNom()).equals(nom)) {
+                    find = true;
+                    m = medicaments[i];
+                }
+            }
+            if (!find) {
+            System.out.println("Ce medicament n'est pas en stock veuilliez recommencer");
+            }
+        }
+        return m;
     }
