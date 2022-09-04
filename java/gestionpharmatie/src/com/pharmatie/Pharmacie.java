@@ -135,3 +135,28 @@ public class Pharmacie {
         }
         return m;
     }
+
+    static double lirePaiement() {
+        double paiement = 0.0;
+        System.out.println("quel est le montant du paiement?");
+        paiement = scanner.nextDouble();
+        scanner.nextLine();
+
+        return paiement;
+    }
+
+    static int lireQuantite() {
+        int quantite;
+        System.out.println("quelle est la quantite achetee?");
+        quantite = scanner.nextInt();
+        scanner.nextLine();
+
+        return quantite;
+        
+    }
+
+    static void quitter() {
+        System.out.println("Programme termine!");
+    }
+}
+       
