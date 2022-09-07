@@ -53,7 +53,6 @@ public class Pharmacie {
         return choix;
     }
 
-    // Autres classes à compléter
     static void achat(Client[] clients, Medicament[] medicaments) {
         Client client = lireClient(clients);
         Medicament medicament = lireMedicament(medicaments);
