@@ -1,2 +1,2 @@
 # exercices
- trouvez ici  des exercices vous permettant d'approfondir vos connaissances en fonction du langage
+ trouvez ici  des exercices pratiques du langage de balisage html qui vous permettrontt d'approfondir vos connaissances pratiques.
