@@ -1,20 +1,26 @@
-.home-container
-{
-    display: flex;
-    flex-wrap: wrap;
-}
-.home-container h1 {
+h1 {
     text-align: center;
 }
-
-.offset {
-    flex: 1;
-}
-
-.tps {
+table {
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    justify-content: center;
     flex: 6;
+    border-collapse: collapse;
+    width: 100%;
+}
+table,
+td {
+    border: 1px solid #333;
 }
 
-.tps a {
-    font-size: 2rem;
+table tr:nth-child(even){
+    background-color: #ccc;
+}
+
+thead,
+tfoot {
+    background-color: orange;
+    color: #000;
 }
