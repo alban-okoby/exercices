@@ -1,0 +1,20 @@
+.home-container
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.home-container h1 {
+    text-align: center;
+}
+
+.offset {
+    flex: 1;
+}
+
+.tps {
+    flex: 6;
+}
+
+.tps a {
+    font-size: 2rem;
+}
